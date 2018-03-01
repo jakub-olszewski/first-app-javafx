@@ -1,8 +1,10 @@
 package eu.b24u.javafx;
 
+
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 
 public class Plotno extends Canvas {
 
@@ -19,6 +21,11 @@ public class Plotno extends Canvas {
 
 	public void rysujOkrag(int startx, int starty, int promien) {
 		rysujOkrag(startx, starty, promien, Color.BLUE);
+	}
+
+	public void wypiszTekst(double x, double y, String tekst) {
+		context.setFont(new Font("Arial", 12));
+		context.fillText(tekst, x, y);
 	}
 
 	public void rysujOkrag(int startx, int starty, int promien, Color color) {

@@ -7,8 +7,6 @@ import eu.b24u.javafx.Scena;
 
 public class MojaAplikacja extends Aplikacja {
 
-	Plansza plansza;
-
 
 	@Override
 	public void zdarzenieKlikniecaMyszka(double x, double y, Plotno plotno) {
@@ -20,12 +18,12 @@ public class MojaAplikacja extends Aplikacja {
 
 	@Override
 	public void budujScene(Scena scena, Plotno plotno) {
-		scena.ustawTytul("Kółko i krzyżyk");
+		scena.ustawTytul("Moja pierwsza aplikacja");
 		scena.ustawRozmiar(500, 500);
 		plotno.ustawRozmiar(500, 500);
 
-		plansza = new Plansza(plotno);
 
+		plotno.wypiszTekst(10, 10, "Witamy na zajeciach z programowania :)");
 
 	}
 
