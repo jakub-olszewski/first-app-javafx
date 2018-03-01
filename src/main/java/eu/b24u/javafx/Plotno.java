@@ -35,6 +35,10 @@ public class Plotno extends Canvas {
 		context.fillOval(startx, starty, promien, promien);
 	}
 
+	public void wstawObrazek(double x, double y, String nazwaObrazka) {
+		context.drawImage(Obrazek.pobierz(nazwaObrazka), x, y);
+	}
+
 	public void rysujLinie(int startx, int starty, int koniecx, int koniecy) {
 		context.setFill(Color.BLUE);
 		context.setStroke(Color.BLUE);

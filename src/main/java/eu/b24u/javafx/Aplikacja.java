@@ -14,7 +14,8 @@ public abstract class Aplikacja extends Application {
     public void start(Stage primaryStage) {
 		plotno = new Plotno();
 		Scena scena = new Scena(primaryStage);
-		Image image = new Image(getClass().getResourceAsStream("/icon.png"));
+		// Image image = new Image(getClass().getResourceAsStream("/icon.png"));
+		Image image = Obrazek.pobierz("icon.png");
 
 		scena.get().getIcons().add(image);
 		budujScene(scena, plotno);

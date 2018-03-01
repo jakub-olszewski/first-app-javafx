@@ -22,9 +22,8 @@ public class MojaAplikacja extends Aplikacja {
 		scena.ustawRozmiar(500, 500);
 		plotno.ustawRozmiar(500, 500);
 
-
+		plotno.wstawObrazek(0, 150, "background.jpg");
 		plotno.wypiszTekst(10, 10, "Witamy na zajeciach z programowania :)");
-
 	}
 
 	@Override
