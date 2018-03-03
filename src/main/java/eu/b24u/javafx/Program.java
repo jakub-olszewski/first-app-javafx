@@ -5,8 +5,14 @@ public class Program {
 	public Program() {
 	}
 
-	public static void wypisz(Object object) {
-		System.out.println(object.toString());
+	/**
+	 * jest to metoda ktora wypisuje tekst na konsole
+	 * 
+	 * @param tekst
+	 *            to tekst ktory sie wyswietla na konsoli
+	 */
+	public static void wypisz(Object tekst) {
+		System.out.println(tekst.toString());
 	}
 
 }

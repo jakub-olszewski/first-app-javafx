@@ -23,6 +23,16 @@ public class Plotno extends Canvas {
 		rysujOkrag(startx, starty, promien, Color.BLUE);
 	}
 
+	/**
+	 * jest to metoda ktora wypisuje tekst na plotnie
+	 * 
+	 * @param x
+	 *            to wspolrzedna pozioma
+	 * @param y
+	 *            to wspolrzedna pionowa
+	 * @param tekst
+	 *            to napis wypisany na plotnie
+	 */
 	public void wypiszTekst(double x, double y, String tekst) {
 		context.setFont(new Font("Arial", 12));
 		context.fillText(tekst, x, y);
