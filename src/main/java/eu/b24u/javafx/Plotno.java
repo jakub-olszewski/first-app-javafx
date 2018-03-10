@@ -74,6 +74,16 @@ public class Plotno extends Canvas {
 		context.strokeLine(startx, starty, koniecx, koniecy);
 	}
 
+	/**
+	 * Metoda ktora rysuje linie
+	 * 
+	 * @param poczatek
+	 *            punkt poczatku linii
+	 * @param koniec
+	 *            punkt konca linii
+	 * @param color
+	 *            kolor linii
+	 */
 	public void rysujLinie(Punkt poczatek, Punkt koniec, Color color) {
 		rysujLinie(poczatek.x, poczatek.y, koniec.x, koniec.y, color);
 	}

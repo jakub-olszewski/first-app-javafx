@@ -14,10 +14,10 @@ public class MojaAplikacja extends Aplikacja {
 
 	@Override
 	public void zdarzenieKlikniecaMyszka(double x, double y, Plotno plotno) {
-		Program.wypisz("x=" + x + " y=" + y);
+		Program.wypisz("Punkt punkt = new Punkt(" + (int) x + " ," + (int) y + ");");
 		// plotno.czysc();
 		Punkt punkt = new Punkt(x, y);
-		plotno.rysujOkrag(punkt, 60, Color.PINK);
+		plotno.rysujOkrag(punkt, 20, Color.ORANGE);
 	}
 
 
