@@ -35,7 +35,7 @@ public class MojaAplikacja extends Aplikacja {
 		plotno.wypiszTekst(50, 100, "Witamy na zajeciach z programowania :)");
 		plotno.wypiszTekst(50, 120, imie + wiek);
 		Program.wypisz("hej");
-		Punkt punktRysowaniaLudzika = new Punkt(50, 50);
+		Punkt punktRysowaniaLudzika = new Punkt(250, 250);
 		Ludzik stefanLudzik = new Ludzik(plotno, punktRysowaniaLudzika);
 
 	}
