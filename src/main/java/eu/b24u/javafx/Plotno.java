@@ -1,6 +1,7 @@
 package eu.b24u.javafx;
 
 
+import eu.b24u.javafx.element.Punkt;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
@@ -42,19 +43,30 @@ public class Plotno extends Canvas {
 		context.setFill(color);
 		context.setStroke(color);
 		context.setLineWidth(5);
-		context.fillOval(startx, starty, promien, promien);
+		context.fillOval(startx - promien / 2, starty - promien / 2, promien, promien);
+	}
+
+	public void rysujOkrag(Punkt punktRysowania, int promien, Color color) {
+		rysujOkrag(punktRysowania.x, punktRysowania.y, promien, color);
 	}
 
 	public void wstawObrazek(double x, double y, String nazwaObrazka) {
 		context.drawImage(Obrazek.pobierz(nazwaObrazka), x, y);
 	}
 
-	public void rysujLinie(int startx, int starty, int koniecx, int koniecy) {
-		context.setFill(Color.BLUE);
-		context.setStroke(Color.BLUE);
+	public void wstawObrazek(Punkt punktRysowania, String nazwaObrazka) {
+		wstawObrazek(punktRysowania.x, punktRysowania.y, nazwaObrazka);
+	}
+
+	public void rysujLinie(int startx, int starty, int koniecx, int koniecy, Color color) {
+		context.setFill(color);
+		context.setStroke(color);
 		context.setLineWidth(5);
 		context.strokeLine(startx, starty, koniecx, koniecy);
+	}
 
+	public void rysujLinie(Punkt poczatek, Punkt koniec, Color color) {
+		rysujLinie(poczatek.x, poczatek.y, koniec.x, koniec.y, color);
 	}
 
 	public void ustawRozmiar(double wysokosc, double szerokosc) {
@@ -66,5 +78,23 @@ public class Plotno extends Canvas {
 		context.setFill(Color.BLACK);
 		context.fillRect(x, y, 1, 1);
 	}
+
+	/**
+	 * Metoda służy do rysowania prostokąta pomiędzy 2 punktami.
+	 * 
+	 * @param p1
+	 *            to punkt 1
+	 * @param p2
+	 *            punkt 2
+	 * @param kolor
+	 *            to kolor prostokąta.
+	 */
+	public void rysujProstokat(Punkt p1, Punkt p2, Color kolor) {
+		context.setFill(kolor);
+		context.setStroke(kolor);
+		context.setLineWidth(5);
+		context.strokeRect(p1.x, p1.y, p2.x, p2.y);
+	}
+
 
 }

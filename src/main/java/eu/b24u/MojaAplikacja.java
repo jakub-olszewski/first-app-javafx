@@ -1,9 +1,12 @@
 package eu.b24u;
 
+
 import eu.b24u.javafx.Aplikacja;
 import eu.b24u.javafx.Plotno;
 import eu.b24u.javafx.Program;
 import eu.b24u.javafx.Scena;
+import eu.b24u.javafx.element.Punkt;
+import javafx.scene.paint.Color;
 
 public class MojaAplikacja extends Aplikacja {
 
@@ -12,7 +15,8 @@ public class MojaAplikacja extends Aplikacja {
 	public void zdarzenieKlikniecaMyszka(double x, double y, Plotno plotno) {
 		Program.wypisz("x=" + x + " y=" + y);
 		// plotno.czysc();
-
+		Punkt punkt = new Punkt(x, y);
+		plotno.rysujOkrag(punkt, 50, Color.BLUE);
 	}
 
 
