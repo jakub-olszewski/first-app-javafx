@@ -1,6 +1,7 @@
 package eu.b24u;
 
 
+import eu.b24u.gra.elementy.Ludzik;
 import eu.b24u.javafx.Aplikacja;
 import eu.b24u.javafx.Plotno;
 import eu.b24u.javafx.Program;
@@ -16,7 +17,7 @@ public class MojaAplikacja extends Aplikacja {
 		Program.wypisz("x=" + x + " y=" + y);
 		// plotno.czysc();
 		Punkt punkt = new Punkt(x, y);
-		plotno.rysujOkrag(punkt, 50, Color.BLUE);
+		plotno.rysujOkrag(punkt, 60, Color.PINK);
 	}
 
 
@@ -28,12 +29,15 @@ public class MojaAplikacja extends Aplikacja {
 
 		plotno.wstawObrazek(0, 150, "background.jpg");
 		// to jest komentarz
-		// typZmiennej nazwaZmiennej = wartość;
+		// TypZmiennej nazwaZmiennej = wartość;
 		String imie = "Aga ";
 		int wiek = 12;
 		plotno.wypiszTekst(50, 100, "Witamy na zajeciach z programowania :)");
 		plotno.wypiszTekst(50, 120, imie + wiek);
 		Program.wypisz("hej");
+		Punkt punktRysowaniaLudzika = new Punkt(50, 50);
+		Ludzik stefanLudzik = new Ludzik(plotno, punktRysowaniaLudzika);
+
 	}
 
 	@Override

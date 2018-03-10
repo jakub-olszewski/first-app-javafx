@@ -46,6 +46,15 @@ public class Plotno extends Canvas {
 		context.fillOval(startx - promien / 2, starty - promien / 2, promien, promien);
 	}
 
+	/**
+	 * 
+	 * @param punktRysowania
+	 *            jest to punkt w którym rysuje sie okrąg
+	 * @param promien
+	 *            odległość granicy okręgu od środka
+	 * @param color
+	 *            kolor okręgu
+	 */
 	public void rysujOkrag(Punkt punktRysowania, int promien, Color color) {
 		rysujOkrag(punktRysowania.x, punktRysowania.y, promien, color);
 	}
