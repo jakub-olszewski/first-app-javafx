@@ -14,13 +14,15 @@ public class Ludzik {
 	public Ludzik(Plotno plotno, Punkt punktRysowaniaLudzika) {
 		Color kolorNiebieski = Color.BLUE;
 		Color colorTestowy = Color.RED;
+		double x = punktRysowaniaLudzika.x;
+		double y = punktRysowaniaLudzika.y;
 
 		int promien = 50;
 
 		plotno.rysujOkrag(punktRysowaniaLudzika, promien, kolorNiebieski);
 
-		Punkt punktKoncaSzyji = new Punkt(248, 300);
-		Punkt punktKoncaRekiLewej = new Punkt(187, 277);
+		Punkt punktKoncaSzyji = new Punkt(x, y + 50);
+		Punkt punktKoncaRekiLewej = new Punkt(x - 50, y + 20);
 		plotno.rysujLinie(punktRysowaniaLudzika, punktKoncaSzyji, kolorNiebieski);
 
 		// Punkty testowe
