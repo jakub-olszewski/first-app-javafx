@@ -19,6 +19,9 @@ public class Ludzik {
 
 		int promien = 50;
 
+		// TODO 1 Dodanie przelacznika do testow
+		// TODO 2 Zrobienie jednej metody do tworzenia punktu i rysowania punktu
+		// testowego jesli przelacznik jest prawda (true)
 		plotno.rysujOkrag(punktRysowaniaLudzika, promien, kolorNiebieski);
 
 		Punkt punktKoncaSzyji = new Punkt(x, y + 50);
