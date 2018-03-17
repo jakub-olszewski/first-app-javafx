@@ -22,6 +22,8 @@ public class Ludzik {
 		// TODO 1 Dodanie przelacznika do testow
 		// TODO 2 Zrobienie jednej metody do tworzenia punktu i rysowania punktu
 		// testowego jesli przelacznik jest prawda (true)
+		// TODO 3 Dodanie do ludzika metody przywitajSie() ( ludzik podnosi reke )
+		// TODO 4 Dodanie do metody przywitajSie()
 		plotno.rysujOkrag(punktRysowaniaLudzika, promien, kolorNiebieski);
 
 		Punkt punktKoncaSzyji = new Punkt(x, y + 50);
