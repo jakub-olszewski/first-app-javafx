@@ -34,11 +34,13 @@ public class Ludzik {
 		Punkt punktKoncaRekiLewej = stworzPunkt(x - 50, y + 20, plotno);
 		plotno.rysujLinie(punktRysowaniaLudzika, punktKoncaSzyji, kolorNiebieski);
 
-		// Punkty testowe
-		// plotno.rysujOkrag(punktRysowaniaLudzika, 10, colorTestowy);
-		// plotno.rysujOkrag(punktKoncaSzyji, 10, colorTestowy);
-		// ta linia ponizej rysuje kropke czerwona lewej reki
-		// plotno.rysujOkrag(punktKoncaRekiLewej, 10, colorTestowy);
+		Color color;
+		Punkt koniecPrawejReki = stworzPunkt(x + 50, y + 20, plotno);
+		// TODO 5 Rysuj prawa reke
+		plotno.rysujLinie(punktKoncaSzyji, koniecPrawejReki, kolorNiebieski);
+		// TODO 6 Rysuj tulow
+		// TODO 7 Rysuj prawa noge
+		// TODO 8 Rysuj lewa noge
 
 		plotno.rysujLinie(punktKoncaSzyji, punktKoncaRekiLewej, kolorNiebieski);
 	}
