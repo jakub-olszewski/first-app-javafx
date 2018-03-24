@@ -119,4 +119,8 @@ public class Plotno extends Canvas {
 		rysujOkrag((int) x, (int) y, promien, Color.BLUE);
 	}
 
+	public void rysujOkrag(Punkt punkt, int promien) {
+		rysujOkrag((int) punkt.x, (int) punkt.y, promien, Color.BLUE);
+	}
+
 }

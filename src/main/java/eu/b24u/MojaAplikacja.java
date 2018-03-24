@@ -42,7 +42,7 @@ public class MojaAplikacja extends Aplikacja {
 		Ludzik stefanLudzik = new Ludzik(plotno, punktRysowaniaLudzika, true);
 		Punkt punktRysowaniaChmurki = new Punkt(200, 250);
 		Chmurka chmurkaStefana = new Chmurka(plotno, punktRysowaniaChmurki, true);
-
+		chmurkaStefana.wstawTekstWChmurce("Tekst w chmurce ludzika");
 	}
 
 	@Override
