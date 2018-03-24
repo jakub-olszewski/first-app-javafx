@@ -15,8 +15,8 @@ public class MojaAplikacja extends Aplikacja {
 
 	@Override
 	public void zdarzenieKlikniecaMyszka(double x, double y, Plotno plotno) {
-		Program.wypisz("Punkt punkt = new Punkt( x -/+ " + ((int) x - punktRysowaniaLudzika.x) + " ,y -/+ "
-				+ ((int) y - punktRysowaniaLudzika.y) + ");");
+		Program.wypisz("Punkt punkt = stworzPunkt( x + (" + ((int) x - punktRysowaniaLudzika.x) + ") ,y + ( "
+				+ ((int) y - punktRysowaniaLudzika.y) + "),plotno);");
 		// plotno.czysc();
 		Punkt punkt = new Punkt(x, y);
 		plotno.rysujOkrag(punkt, 20, Color.ORANGE);

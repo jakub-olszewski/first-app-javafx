@@ -30,14 +30,16 @@ public class Ludzik {
 		plotno.rysujOkrag(punktRysowaniaLudzika, promien, kolorNiebieski);
 
 		// Punkt punktKoncaSzyji = new Punkt(x, y + 50);
-		Punkt punktKoncaSzyji = stworzPunkt(x, y + 50, plotno);
+		Punkt punktKoncaSzyji = stworzPunkt(x + 0, y + 50, plotno);
 		Punkt punktKoncaRekiLewej = stworzPunkt(x - 50, y + 20, plotno);
 		plotno.rysujLinie(punktRysowaniaLudzika, punktKoncaSzyji, kolorNiebieski);
 
 		Color color;
-		Punkt koniecPrawejReki = stworzPunkt(x + 50, y + 20, plotno);
+		Punkt punktKoniecPrawejReki = stworzPunkt(x + 50, y + 20, plotno);
 		// TODO 5 Rysuj prawa reke
-		plotno.rysujLinie(punktKoncaSzyji, koniecPrawejReki, kolorNiebieski);
+		plotno.rysujLinie(punktKoncaSzyji, punktKoniecPrawejReki, kolorNiebieski);
+		plotno.rysujLinie(punktKoncaSzyji, punktKoniecPrawejReki, kolorNiebieski);
+		Punkt punktKoniecTulowia = stworzPunkt(x, y + 103, plotno);
 		// TODO 6 Rysuj tulow
 		// TODO 7 Rysuj prawa noge
 		// TODO 8 Rysuj lewa noge
@@ -45,6 +47,17 @@ public class Ludzik {
 		plotno.rysujLinie(punktKoncaSzyji, punktKoncaRekiLewej, kolorNiebieski);
 	}
 
+	/**
+	 * Tworzenie punktu na plotnie i rysuje testowo czerwona kropke
+	 * 
+	 * @param x
+	 *            wspolrzedna pozioma
+	 * @param y
+	 *            wspolrzedna pionowa
+	 * @param plotno
+	 *            miejsce na ktorym rysujemy
+	 * @return punkt
+	 */
 	private Punkt stworzPunkt(double x, double y, Plotno plotno) {
 		Punkt stworzonyPunkt = new Punkt(x, y);
 		if (czyTestujemy) {
