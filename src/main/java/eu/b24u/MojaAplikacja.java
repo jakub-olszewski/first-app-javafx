@@ -11,10 +11,12 @@ import javafx.scene.paint.Color;
 
 public class MojaAplikacja extends Aplikacja {
 
+	private Punkt punktRysowaniaLudzika;
 
 	@Override
 	public void zdarzenieKlikniecaMyszka(double x, double y, Plotno plotno) {
-		Program.wypisz("Punkt punkt = new Punkt(" + (int) x + " ," + (int) y + ");");
+		Program.wypisz("Punkt punkt = new Punkt( x -/+ " + ((int) x - punktRysowaniaLudzika.x) + " ,y -/+ "
+				+ ((int) y - punktRysowaniaLudzika.y) + ");");
 		// plotno.czysc();
 		Punkt punkt = new Punkt(x, y);
 		plotno.rysujOkrag(punkt, 20, Color.ORANGE);
@@ -35,7 +37,7 @@ public class MojaAplikacja extends Aplikacja {
 		plotno.wypiszTekst(50, 100, "Witamy na zajeciach z programowania :)");
 		plotno.wypiszTekst(50, 120, imie + wiek);
 		Program.wypisz("hej");
-		Punkt punktRysowaniaLudzika = new Punkt(250, 250);
+		punktRysowaniaLudzika = new Punkt(250, 250);
 		Ludzik stefanLudzik = new Ludzik(plotno, punktRysowaniaLudzika, true);
 
 	}
