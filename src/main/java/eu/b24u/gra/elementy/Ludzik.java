@@ -41,6 +41,12 @@ public class Ludzik {
 		Punkt punktKoniecTulowia = stworzPunkt(x, y + 103, plotno);
 		plotno.rysujLinie(punktKoncaSzyji, punktKoniecTulowia, kolorNiebieski);
 
+		Punkt punktLewejNogi = stworzPunkt(x + (-49), y + (133), plotno);
+		plotno.rysujLinie(punktKoniecTulowia, punktLewejNogi, kolorNiebieski);
+
+		Punkt punktPrawejNogi = stworzPunkt(x + (43), y + (133), plotno);
+		plotno.rysujLinie(punktKoniecTulowia, punktPrawejNogi, kolorNiebieski);
+
 		// TODO 6 Rysuj tulow
 		// TODO 7 Rysuj prawa noge
 		// TODO 8 Rysuj lewa noge
