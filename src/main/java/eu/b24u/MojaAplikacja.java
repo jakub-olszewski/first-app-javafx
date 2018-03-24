@@ -1,6 +1,7 @@
 package eu.b24u;
 
 
+import eu.b24u.gra.elementy.Chmurka;
 import eu.b24u.gra.elementy.Ludzik;
 import eu.b24u.javafx.Aplikacja;
 import eu.b24u.javafx.Plotno;
@@ -37,8 +38,10 @@ public class MojaAplikacja extends Aplikacja {
 		plotno.wypiszTekst(50, 100, "Witamy na zajeciach z programowania :)");
 		plotno.wypiszTekst(50, 120, imie + wiek);
 		Program.wypisz("hej");
-		punktRysowaniaLudzika = new Punkt(250, 250);
+		punktRysowaniaLudzika = new Punkt(80, 250);
 		Ludzik stefanLudzik = new Ludzik(plotno, punktRysowaniaLudzika, true);
+		Punkt punktRysowaniaChmurki = new Punkt(200, 250);
+		Chmurka chmurkaStefana = new Chmurka(plotno, punktRysowaniaChmurki, true);
 
 	}
 

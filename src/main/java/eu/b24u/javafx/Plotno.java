@@ -115,5 +115,8 @@ public class Plotno extends Canvas {
 		context.strokeRect(p1.x, p1.y, p2.x, p2.y);
 	}
 
+	public void rysujOkrag(double x, double y, int promien) {
+		rysujOkrag((int) x, (int) y, promien, Color.BLUE);
+	}
 
 }
