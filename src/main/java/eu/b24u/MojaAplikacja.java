@@ -35,7 +35,9 @@ public class MojaAplikacja extends Aplikacja {
 		// TypZmiennej nazwaZmiennej = wartość;
 		String imie = "Aga ";
 		int wiek = 12;
-		plotno.wypiszTekst(50, 100, "Witamy na zajeciach z programowania :)");
+		plotno.wypiszTekst(50, 80, "Witamy");
+		plotno.wypiszTekst(50, 100, "na zajeciach z programowania :)");
+
 		plotno.wypiszTekst(50, 120, imie + wiek);
 		Program.wypisz("hej");
 		punktRysowaniaLudzika = new Punkt(80, 250);
