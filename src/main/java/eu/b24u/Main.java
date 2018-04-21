@@ -1,5 +1,7 @@
 package eu.b24u;
 
+import eu.b24u.javafx.gra.kolkoikrzyzyk.KolkoIKrzyzykAplikacja;
+
 /**
  * 
  */
@@ -8,7 +10,7 @@ package eu.b24u;
  * @author Jakub
  *
  */
-public class Main extends MojaAplikacja {
+public class Main extends KolkoIKrzyzykAplikacja {
 
 
 
