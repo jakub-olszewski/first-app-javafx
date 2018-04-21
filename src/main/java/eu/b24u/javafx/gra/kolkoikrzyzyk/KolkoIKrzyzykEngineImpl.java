@@ -9,19 +9,29 @@ public class KolkoIKrzyzykEngineImpl implements KolkoIKrzyzykEngine {
 	@Override
 	public void rysujPlansze(Plotno plotno) {
 		// TODO rysowanie planszy 3x3 kratki
-		plotno.rysujLinie(new Punkt(0, 0), new Punkt(100, 100), Color.BLUE);
+		// dwie linie poziome
+		plotno.rysujLinie(new Punkt(0, 100), new Punkt(300, 100), Color.BLUE);
+		plotno.rysujLinie(new Punkt(0, 200), new Punkt(300, 200), Color.BLUE);
+		// dwie linie pionowe
+		plotno.rysujLinie(new Punkt(100, 0), new Punkt(100, 300), Color.BLUE);
+		plotno.rysujLinie(new Punkt(200, 0), new Punkt(200, 300), Color.BLUE);
 	}
 
 	@Override
 	public void rysujKolko(Punkt punkt, Plotno plotno) {
-		// TODO Auto-generated method stub
-
+		plotno.rysujOkrag(punkt, 50);
+		plotno.rysujOkrag(punkt.x - 1, punkt.y - 1, 45, Color.WHITE);
 	}
 
 	@Override
 	public void rysujKrzyzyk(Punkt punkt, Plotno plotno) {
-		// TODO Auto-generated method stub
+		Punkt poczatek = new Punkt(punkt.x - 5, punkt.y - 5);
+		Punkt koniec = new Punkt(punkt.x + 5, punkt.y + 5);
+		plotno.rysujLinie(poczatek, koniec, Color.BLUE);
 
+		Punkt poczatek2 = new Punkt(punkt.x + 5, punkt.y - 5);
+		Punkt koniec2 = new Punkt(punkt.x - 5, punkt.y + 5);
+		plotno.rysujLinie(poczatek2, koniec2, Color.BLUE);
 	}
 
 	@Override
