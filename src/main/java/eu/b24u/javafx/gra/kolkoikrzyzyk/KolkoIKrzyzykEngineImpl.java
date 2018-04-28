@@ -25,12 +25,12 @@ public class KolkoIKrzyzykEngineImpl implements KolkoIKrzyzykEngine {
 
 	@Override
 	public void rysujKrzyzyk(Punkt punkt, Plotno plotno) {
-		Punkt poczatek = new Punkt(punkt.x - 5, punkt.y - 5);
-		Punkt koniec = new Punkt(punkt.x + 5, punkt.y + 5);
+		Punkt poczatek = new Punkt(punkt.x - 30, punkt.y - 30);
+		Punkt koniec = new Punkt(punkt.x + 30, punkt.y + 30);
 		plotno.rysujLinie(poczatek, koniec, Color.BLUE);
 
-		Punkt poczatek2 = new Punkt(punkt.x + 5, punkt.y - 5);
-		Punkt koniec2 = new Punkt(punkt.x - 5, punkt.y + 5);
+		Punkt poczatek2 = new Punkt(punkt.x + 30, punkt.y - 30);
+		Punkt koniec2 = new Punkt(punkt.x - 30, punkt.y + 30);
 		plotno.rysujLinie(poczatek2, koniec2, Color.BLUE);
 	}
 
